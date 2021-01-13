@@ -1,1 +1,9 @@
+In order to compile AGreatstWeightCalculator, you need to perform the following steps:
 
+1. Install GNAT.
+
+2. Open a terminal.
+
+3. In the directory of AGreatstWeightCalculator source code, run:
+
+gnatmake agreatstweightcalculator.adb
