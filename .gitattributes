@@ -1,0 +1,6 @@
+* text=auto
+*.md text eol=crlf
+*.txt text eol=crlf
+*.adb text eol=crlf
+*.gitattributes text eol=crlf
+*.gitignore text eol=crlf
