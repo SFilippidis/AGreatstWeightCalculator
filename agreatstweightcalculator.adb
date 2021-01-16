@@ -68,7 +68,7 @@ begin
    Ada.Text_IO.Put_Line("");
    Ada.Text_IO.Put_Line("");
 
-   Ada.Text_IO.Put("Please enter your weight in kg (valid range: 30 =< weight =< 300): ");
+   Ada.Text_IO.Put("Please enter your weight in kg (valid range: from 30 to 300): ");
 
    is_data_ok := True;
 
@@ -85,12 +85,12 @@ begin
       exit when is_data_ok;
       Ada.Text_IO.Put_Line("");
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for weight: value should be in the range 30 =< weight =< 300.");
-      Ada.Text_IO.Put("Please enter your weight in kg (valid range: 30 =< weight =< 300): ");
+      Ada.Text_IO.Put("Please enter your weight in kg (valid range: from 30 to 300): ");
       is_data_ok := True;
    end loop;
 
    Ada.Text_IO.Put_Line("");
-   Ada.Text_IO.Put("Please enter your height in cm (valid range: 100<height<270): ");
+   Ada.Text_IO.Put("Please enter your height in cm (valid range: from 100 to 270): ");
 
    loop
       begin
@@ -105,12 +105,12 @@ begin
       exit when is_data_ok;
       Ada.Text_IO.Put_Line("");
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for height: value should be in the range 100<height<270.");
-      Ada.Text_IO.Put("Please enter your height in cm (valid range: 100<height<270): ");
+      Ada.Text_IO.Put("Please enter your height in cm (valid range: from 100 to 270): ");
       is_data_ok := True;
    end loop;
 
    Ada.Text_IO.Put_Line("");
-   Ada.Text_IO.Put("Please enter your age in years (valid range: 20<age<110): ");
+   Ada.Text_IO.Put("Please enter your age in years (valid range: from 20 to 110): ");
 
    loop
       begin
@@ -125,7 +125,7 @@ begin
       exit when is_data_ok;
       Ada.Text_IO.Put_Line("");
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for age: value should be in the range 20<age<110.");
-      Ada.Text_IO.Put("Please enter your age in years (valid range: 20<age<110): ");
+      Ada.Text_IO.Put("Please enter your age in years (valid range: from 20 to 110): ");
       is_data_ok := True;
    end loop;
 
@@ -163,7 +163,7 @@ begin
    Ada.Text_IO.Put_Line("4 - moderate exercise (3-5 days per week)");
    Ada.Text_IO.Put_Line("5 - heavy exercise (6-7 days per week)");
    Ada.Text_IO.Put_Line("6 - very heavy exercise (twice per day, extra heavy workouts)");
-   Ada.Text_IO.Put("Please enter your activity level in the range 1<=level<=6: ");
+   Ada.Text_IO.Put("Please enter your activity level in the range from 1 to 6: ");
 
    loop
       begin
@@ -185,7 +185,7 @@ begin
       Ada.Text_IO.Put_Line("4 - moderate exercise (3-5 days per week)");
       Ada.Text_IO.Put_Line("5 - heavy exercise (6-7 days per week)");
       Ada.Text_IO.Put_Line("6 - very heavy exercise (twice per day, extra heavy workouts)");
-      Ada.Text_IO.Put("Please enter your activity level in the range 1<=level<=6: ");
+      Ada.Text_IO.Put("Please enter your activity level in the range from 1 to 6: ");
       is_data_ok := True;
    end loop;
 
