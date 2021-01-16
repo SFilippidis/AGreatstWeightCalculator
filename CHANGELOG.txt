@@ -1,3 +1,9 @@
+2021-01-16  Stavros Filippidis  <sfilippidis@gmail.com>
+
+	* Version 1.0.2 released.
+	* Different use of types and subtypes.
+	* Code refactoring.
+	
 2021-01-13  Stavros Filippidis  <sfilippidis@gmail.com>
 
 	* Version 1.0.1 released, placed under the GNU General Public License.
