@@ -49,7 +49,7 @@ procedure AGreatstWeightCalculator is
 
 begin
 
-   Put_Line("AGreatstWeightCalculator. Version 1.0.2. A program for weight related calculations.");
+   Put_Line("AGreatstWeightCalculator. Version 1.0.3. A program for weight related calculations.");
    Put_Line("");
    Put_Line("Copyright (C) 2020-2021 Stavros Filippidis.");
    Put_Line("email: sfilippidis@gmail.com");
