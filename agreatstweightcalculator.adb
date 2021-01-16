@@ -83,7 +83,6 @@ begin
             Ada.Text_IO.Skip_Line;
             is_data_ok := False;
          when Constraint_Error =>
-            Ada.Text_IO.Skip_Line;
             is_data_ok := False;
       end;
       exit when is_data_ok;
@@ -104,7 +103,6 @@ begin
             Ada.Text_IO.Skip_Line;
             is_data_ok := False;
          when Constraint_Error =>
-            Ada.Text_IO.Skip_Line;
             is_data_ok := False;
       end;
       exit when is_data_ok;
@@ -125,7 +123,6 @@ begin
             Ada.Text_IO.Skip_Line;
             is_data_ok := False;
          when Constraint_Error =>
-            Ada.Text_IO.Skip_Line;
             is_data_ok := False;
       end;
       exit when is_data_ok;
@@ -146,7 +143,6 @@ begin
             Ada.Text_IO.Skip_Line;
             is_data_ok := False;
          when Constraint_Error =>
-            Ada.Text_IO.Skip_Line;
             is_data_ok := False;
       end;
       exit when is_data_ok;
@@ -180,7 +176,6 @@ begin
             Ada.Text_IO.Skip_Line;
             is_data_ok := False;
          when Constraint_Error =>
-            Ada.Text_IO.Skip_Line;
             is_data_ok := False;
       end;
       exit when is_data_ok;
