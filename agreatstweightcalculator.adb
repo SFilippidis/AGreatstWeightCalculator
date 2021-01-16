@@ -24,16 +24,32 @@ with Ada.IO_Exceptions;
 procedure AGreatstWeightCalculator is
 
    type Gender_Type is (Male, Female);
-   type Activity_Type is (No_Exercise, Little_Exercise, Light_Exercise, Moderate_Exercise, Heavy_Exercise, Very_Heavy_Exercise);
-
-   weight, height, age, bmi, idealWeightLow, idealWeightHigh, kcal : Float := -1.0;
-   gender_choose, activity_choose : Integer := -1;
    gender : Gender_Type;
+
+   type Activity_Type is (No_Exercise, Little_Exercise, Light_Exercise, Moderate_Exercise, Heavy_Exercise, Very_Heavy_Exercise);
    activity : Activity_Type;
+
+   subtype Weight_Type is Float range 30.0..300.0;
+   weight : Weight_Type;
+
+   subtype Height_Type is Float range 100.0..270.0;
+   height : Height_Type;
+
+   subtype Age_Type is Float range 20.0..110.0;
+   age : Age_Type;
+
+   subtype Gender_Choose_Type is Integer range 1..2;
+   gender_choose : Gender_Choose_Type;
+
+   subtype Activity_Choose_Type is Integer range 1..6;
+   activity_choose : Activity_Choose_Type;
+
+   bmi, idealWeightLow, idealWeightHigh, kcal : Float;
+   is_data_ok : Boolean;
 
 begin
 
-   Put_Line("AGreatstWeightCalculator. Version 1.0.1. A program for weight related calculations.");
+   Put_Line("AGreatstWeightCalculator. Version 1.0.2. A program for weight related calculations.");
    Put_Line("");
    Put_Line("Copyright (C) 2020-2021 Stavros Filippidis.");
    Put_Line("email: sfilippidis@gmail.com");
@@ -55,7 +71,9 @@ begin
    Put_Line("");
    Put_Line("");
 
-   Put("Please enter your weight in kg (valid range: 30<weight<300): ");
+   Put("Please enter your weight in kg (valid range: 30 =< weight =< 300): ");
+
+   is_data_ok := True;
 
    loop
       begin
@@ -63,12 +81,16 @@ begin
       exception
          when Data_Error =>
             Skip_Line;
-            weight := -1.0;
+            is_data_ok := False;
+         when Constraint_Error =>
+            Skip_Line;
+            is_data_ok := False;
       end;
-      exit when weight > 30.0 and weight < 300.0;
+      exit when is_data_ok;
       Put_Line("");
-      Put_Line("Wrong! Please enter valid value for weight: value should be in the range 30<weight<300.");
-      Put("Please enter your weight in kg (valid range: 30<weight<300): ");
+      Put_Line("Wrong! Please enter valid value for weight: value should be in the range 30 =< weight =< 300.");
+      Put("Please enter your weight in kg (valid range: 30 =< weight =< 300): ");
+      is_data_ok := True;
    end loop;
 
    Put_Line("");
@@ -80,12 +102,16 @@ begin
       exception
          when Data_Error =>
             Skip_Line;
-            height := -1.0;
+            is_data_ok := False;
+         when Constraint_Error =>
+            Skip_Line;
+            is_data_ok := False;
       end;
-      exit when height > 100.0 and height < 270.0;
+      exit when is_data_ok;
       Put_Line("");
       Put_Line("Wrong! Please enter valid value for height: value should be in the range 100<height<270.");
       Put("Please enter your height in cm (valid range: 100<height<270): ");
+      is_data_ok := True;
    end loop;
 
    Put_Line("");
@@ -97,12 +123,16 @@ begin
       exception
          when Data_Error =>
             Skip_Line;
-            age := -1.0;
+            is_data_ok := False;
+         when Constraint_Error =>
+            Skip_Line;
+            is_data_ok := False;
       end;
-      exit when age > 20.0 and age < 110.0;
+      exit when is_data_ok;
       Put_Line("");
       Put_Line("Wrong! Please enter valid value for age: value should be in the range 20<age<110.");
       Put("Please enter your age in years (valid range: 20<age<110): ");
+      is_data_ok := True;
    end loop;
 
    Put_Line("");
@@ -114,12 +144,16 @@ begin
       exception
          when Data_Error =>
             Skip_Line;
-            gender_choose := -1;
+            is_data_ok := False;
+         when Constraint_Error =>
+            Skip_Line;
+            is_data_ok := False;
       end;
-      exit when gender_choose in 1..2;
+      exit when is_data_ok;
       Put_Line("");
       Put_Line("Wrong! Please enter valid value for age: value should be 1 for male or 2 for female.");
       Put("Please enter your gender: enter 1 for male or 2 for female: ");
+      is_data_ok := True;
    end loop;
 
    if gender_choose = 1 then
@@ -144,9 +178,12 @@ begin
       exception
          when Data_Error =>
             Skip_Line;
-            activity_choose := -1;
+            is_data_ok := False;
+         when Constraint_Error =>
+            Skip_Line;
+            is_data_ok := False;
       end;
-      exit when activity_choose in 1..6;
+      exit when is_data_ok;
       Put_Line("");
       Put_Line("Wrong! Please enter valid value for activity level: value should be in the range 1<=level<=6.");
       Put_Line("Select your activity level. Use a value from 1 to 6, where:");
@@ -157,6 +194,7 @@ begin
       Put_Line("5 - heavy exercise (6-7 days per week)");
       Put_Line("6 - very heavy exercise (twice per day, extra heavy workouts)");
       Put("Please enter your activity level in the range 1<=level<=6: ");
+      is_data_ok := True;
    end loop;
 
    case activity_choose is
@@ -174,9 +212,7 @@ begin
          activity := Very_Heavy_Exercise;
    end case;
 
-   height := height / 100.0;
-
-   bmi := weight/(height*height);
+   bmi := weight / ( (height / 100.0) * (height / 100.0) );
    Put_Line("");
    Put_Line("");
    Put_Line("Here are your results (approximately):");
@@ -196,20 +232,18 @@ begin
 
    Put_Line(".");
 
-   idealWeightLow := 18.50 * height * height;
-   idealWeightHigh := 24.99999 * height * height;
+   idealWeightLow := 18.50 * (height / 100.0) * (height / 100.0);
+   idealWeightHigh := 24.99999 * (height / 100.0) * (height / 100.0);
    Put("Based on your height, your normal weight range is from ");
    Put(idealWeightLow, Fore => 3, Aft => 2, Exp => 0);
    Put(" to ");
    Put(idealWeightHigh, Fore => 3, Aft => 2, Exp => 0);
    Put_Line(".");
 
-   kcal := 0.0;
-
    if gender = Male then
-      kcal := kcal + 66.0 + weight * 13.70 + height * 5.00 * 100.0 - age * 6.80;
+      kcal := 66.0 + weight * 13.70 + (height / 100.0) * 5.00 * 100.0 - age * 6.80;
    else
-      kcal := kcal + 655.0 + weight * 9.60 + height * 1.80 * 100.0 - age * 4.70;
+      kcal := 655.0 + weight * 9.60 + (height / 100.0) * 1.80 * 100.0 - age * 4.70;
    end if;
 
    case activity is
