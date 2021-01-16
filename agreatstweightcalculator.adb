@@ -24,27 +24,24 @@ with Ada.IO_Exceptions;
 procedure AGreatstWeightCalculator is
 
    type Gender_Type is (Male, Female);
-   gender : Gender_Type;
-
    type Activity_Type is (No_Exercise, Little_Exercise, Light_Exercise, Moderate_Exercise, Heavy_Exercise, Very_Heavy_Exercise);
-   activity : Activity_Type;
-
    subtype Weight_Type is Float range 30.0..300.0;
-   weight : Weight_Type;
-
    subtype Height_Type is Float range 100.0..270.0;
-   height : Height_Type;
-
    subtype Age_Type is Float range 20.0..110.0;
-   age : Age_Type;
-
    subtype Gender_Choose_Type is Integer range 1..2;
-   gender_choose : Gender_Choose_Type;
-
    subtype Activity_Choose_Type is Integer range 1..6;
+   
+   gender : Gender_Type;
+   activity : Activity_Type;
+   weight : Weight_Type;
+   height : Height_Type;
+   age : Age_Type;
+   gender_choose : Gender_Choose_Type;
    activity_choose : Activity_Choose_Type;
-
-   bmi, idealWeightLow, idealWeightHigh, kcal : Float;
+   bmi : Float;
+   idealWeightLow : Float;
+   idealWeightHigh : Float;
+   kcal : Float;
    is_data_ok : Boolean;
 
 begin
