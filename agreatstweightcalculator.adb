@@ -47,26 +47,26 @@ procedure AGreatstWeightCalculator is
 begin
 
    Ada.Text_IO.Put_Line("AGreatstWeightCalculator. Version 1.0.3+. A program for weight related calculations.");
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
    Ada.Text_IO.Put_Line("Copyright (C) 2020-2021 Stavros Filippidis.");
    Ada.Text_IO.Put_Line("email: sfilippidis@gmail.com");
    Ada.Text_IO.Put_Line("www: https://sfil.mysch.gr/");
-   Ada.Text_IO.Put_Line("");
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
+   Ada.Text_IO.New_Line;
    Ada.Text_IO.Put_Line("AGreatstWeightCalculator is free software: you can redistribute it and/or modify");
    Ada.Text_IO.Put_Line("it under the terms of the GNU General Public License as published by");
    Ada.Text_IO.Put_Line("the Free Software Foundation, either version 3 of the License, or");
    Ada.Text_IO.Put_Line("(at your option) any later version.");
-   Ada.Text_IO.Put_Line("");
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
+   Ada.Text_IO.New_Line;
    Ada.Text_IO.Put_Line("AGreatstWeightCalculator is distributed in the hope that it will be useful,");
    Ada.Text_IO.Put_Line("but WITHOUT ANY WARRANTY; without even the implied warranty of");
    Ada.Text_IO.Put_Line("MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the");
    Ada.Text_IO.Put_Line("GNU General Public License for more details.");
    Ada.Text_IO.Put_Line("You should have received a copy of the GNU General Public License");
    Ada.Text_IO.Put_Line("along with AGreatstWeightCalculator.  If not, see http://www.gnu.org/licenses/");
-   Ada.Text_IO.Put_Line("");
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
+   Ada.Text_IO.New_Line;
 
    Ada.Text_IO.Put("Please enter your weight in kg (valid range: from 30 to 300): ");
 
@@ -83,13 +83,13 @@ begin
             is_data_ok := False;
       end;
       exit when is_data_ok;
-      Ada.Text_IO.Put_Line("");
+      Ada.Text_IO.New_Line;
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for weight: value should be in the range 30 =< weight =< 300.");
       Ada.Text_IO.Put("Please enter your weight in kg (valid range: from 30 to 300): ");
       is_data_ok := True;
    end loop;
 
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
    Ada.Text_IO.Put("Please enter your height in cm (valid range: from 100 to 270): ");
 
    loop
@@ -103,13 +103,13 @@ begin
             is_data_ok := False;
       end;
       exit when is_data_ok;
-      Ada.Text_IO.Put_Line("");
+      Ada.Text_IO.New_Line;
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for height: value should be in the range 100<height<270.");
       Ada.Text_IO.Put("Please enter your height in cm (valid range: from 100 to 270): ");
       is_data_ok := True;
    end loop;
 
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
    Ada.Text_IO.Put("Please enter your age in years (valid range: from 20 to 110): ");
 
    loop
@@ -123,13 +123,13 @@ begin
             is_data_ok := False;
       end;
       exit when is_data_ok;
-      Ada.Text_IO.Put_Line("");
+      Ada.Text_IO.New_Line;
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for age: value should be in the range 20<age<110.");
       Ada.Text_IO.Put("Please enter your age in years (valid range: from 20 to 110): ");
       is_data_ok := True;
    end loop;
 
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
    Ada.Text_IO.Put("Please enter your gender: enter 1 for male or 2 for female: ");
 
    loop
@@ -143,7 +143,7 @@ begin
             is_data_ok := False;
       end;
       exit when is_data_ok;
-      Ada.Text_IO.Put_Line("");
+      Ada.Text_IO.New_Line;
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for age: value should be 1 for male or 2 for female.");
       Ada.Text_IO.Put("Please enter your gender: enter 1 for male or 2 for female: ");
       is_data_ok := True;
@@ -155,7 +155,7 @@ begin
       gender := Female;
    end if;
 
-   Ada.Text_IO.Put_Line("");
+   Ada.Text_IO.New_Line;
    Ada.Text_IO.Put_Line("Select your activity level. Use a value from 1 to 6, where:");
    Ada.Text_IO.Put_Line("1 - no exercise");
    Ada.Text_IO.Put_Line("2 - little exercise");
@@ -176,7 +176,7 @@ begin
             is_data_ok := False;
       end;
       exit when is_data_ok;
-      Ada.Text_IO.Put_Line("");
+      Ada.Text_IO.New_Line;
       Ada.Text_IO.Put_Line("Wrong! Please enter valid value for activity level: value should be in the range 1<=level<=6.");
       Ada.Text_IO.Put_Line("Select your activity level. Use a value from 1 to 6, where:");
       Ada.Text_IO.Put_Line("1 - no exercise");
