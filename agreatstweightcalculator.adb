@@ -1,7 +1,7 @@
 -- AGreatstWeightCalculator: A program for weight related calculations.
 
 -- Copyright (C) 2020-2021 Stavros Filippidis
--- Contact: sfilippidis@gmail.com
+-- Contact: stavros@filippidis.name
 
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +49,8 @@ begin
    Ada.Text_IO.Put_Line("AGreatstWeightCalculator. Version 1.0.3+. A program for weight related calculations.");
    Ada.Text_IO.New_Line;
    Ada.Text_IO.Put_Line("Copyright (C) 2020-2021 Stavros Filippidis.");
-   Ada.Text_IO.Put_Line("email: sfilippidis@gmail.com");
-   Ada.Text_IO.Put_Line("www: https://sfil.mysch.gr/");
+   Ada.Text_IO.Put_Line("email: stavros@filippidis.name");
+   Ada.Text_IO.Put_Line("www: https://www.filippidis.name/");
    Ada.Text_IO.New_Line;
    Ada.Text_IO.New_Line;
    Ada.Text_IO.Put_Line("AGreatstWeightCalculator is free software: you can redistribute it and/or modify");
