@@ -48,7 +48,7 @@ begin
 
    Ada.Text_IO.Put_Line("AGreatstWeightCalculator. Version 1.0.3+. A program for weight related calculations.");
    Ada.Text_IO.New_Line;
-   Ada.Text_IO.Put_Line("Copyright (C) 2020-2021 Stavros Filippidis.");
+   Ada.Text_IO.Put_Line("Copyright (C) 2020-2024 Stavros Filippidis.");
    Ada.Text_IO.Put_Line("email: stavros@filippidis.name");
    Ada.Text_IO.Put_Line("www: https://www.filippidis.name/");
    Ada.Text_IO.New_Line;
