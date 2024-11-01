@@ -1,6 +1,6 @@
 -- AGreatstWeightCalculator: A program for weight related calculations.
 
--- Copyright (C) 2020-2021 Stavros Filippidis
+-- Copyright (C) 2020-2024 Stavros Filippidis
 -- Contact: stavros@filippidis.name
 
 -- This program is free software: you can redistribute it and/or modify
